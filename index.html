@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: 'rgb(216, 243, 220)',
+                            100: 'rgb(183, 228, 199)',
+                            200: 'rgb(149, 213, 178)',
+                            300: 'rgb(116, 198, 157)',
+                            400: 'rgb(82, 183, 136)'
+                        },
+                    }
+                }
+            }
+        }
+    </script>
     <title>SeniorCare</title>
 </head>
-<body>
-    
+
+<body class="bg-primary">
+    <header class="w-full h-[90px] p-[20px] bg-white flex justify-between md:justify-evenly items-center drop-shadow-lg">
+        <img class="w-[40%] md:w-[25%] lg:w-[10%]" src="./src/img/seniorcarelogo.png" alt="Logo">
+        <button onclick="" class="w-[32px]">
+            <span class="material-symbols-outlined text-[32px]">
+                menu
+            </span>
+        </button>
+        <nav class="hidden md:flex">
+            <ul class="flex gap-5">
+                <li class="hover:pb-[10px]" ><a href="#">Home</a></li>
+                <li class="hover:pb-[10px]" ><a href="#">Home</a></li>
+                <li class="hover:pb-[10px]" ><a href="#">Home</a></li>
+                <li class="hover:pb-[10px]" ><a href="#">Home</a></li>
+                <li class="hover:pb-[10px]" ><a href="#">Home</a></li>
+            </ul>
+            <div class="">
+
+            </div>
+        </nav>
+    </header>
 </body>
+
 </html>
