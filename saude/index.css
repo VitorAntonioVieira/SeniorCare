@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D8F3DC; /* Cor mais clara da paleta */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #B7E4C7; /* Cor mais escura da paleta */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #52B788; /* Cor intermediária */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #05668D;
+}
+
+h3 {
+    color: #05668D;
+    margin-top: 10px;
+}
+
+.highlight {
+    background-color: #B7E4C7; /* Cor intermediária escura */
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.image-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.standard-img {
+    max-width: 80%; /* Mesma largura para todas as imagens */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #116198; /* Cor escura */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Mudança para evitar sobreposição */
+    width: 100%;
+    bottom: 0;
+    margin-top: 20px;
+}
+
+.logo{
+    width: 500px;
+}
