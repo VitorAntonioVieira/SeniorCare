@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="img/logo.png" type="image/png">
+
+    <title>Senior Care</title>
+</head>
+<body>
+    <header>
+        <img id="logoheader" src="img/seniorcarelogo.png" alt="logo">
+    </header>
+    <div id="content1">
+        <div id="info">
+            <h1>Você já se esqueceu de onde colocou algo importante ou teve dificuldade em lembrar o nome de alguém que conhece bem?</h1>
+            <h2>Tem notado que, às vezes, é difícil lembrar eventos recentes ou conversas?</h2>
+            <h3 id="introdutorio">Para muitos idosos, esses pequenos esquecimentos podem parecer normais, mas podem também ser sinais de algo mais sério, como a Doença de Alzheimer. Conhecer mais sobre esses sintomas pode ajudar a identificar precocemente e buscar o cuidado necessário.</h3>
+            <button id="maisinfo" onclick="scrollToSection()">Saiba Mais</button>
+        </div>
+        <div id="imagem1">
+            <img id="alzheimer" src="img/alzheimer.png" alt="alzhaimer">
+        </div>
+    </div>
+            
+    <h3 id="aumento">Aumento</h3>
+    <p class="highlight">A doença instala-se quando o processamento de certas proteínas do sistema nervoso central começa a dar errado. Surgem, então, fragmentos de proteínas mal cortadas, tóxicas, dentro dos neurônios e nos espaços que existem entre eles, o que leva à perda progressiva de neurônios em regiões do cérebro como o hipocampo e o córtex cerebral.</p>
+
+    <h3>Causas</h3>
+    <p class="highlight">A causa ainda é desconhecida, mas acredita-se que seja geneticamente determinada. É a forma mais comum de demência neurodegenerativa em pessoas idosas.</p>
+
+    <h3>Prevenção</h3>
+    <p class="highlight">Estudar, ler, pensar, manter a mente ativa, fazer exercícios de aritmética, jogos inteligentes, atividades em grupo, não fumar, evitar álcool, ter uma alimentação saudável e fazer atividades físicas regulares.</p>
+
+    <h3>Tratamento</h3>
+    <p class="highlight">O tratamento é medicamentoso com remédios como Donepezila, Galantamina, Rivastigmina e Memantina, para estabilizar o comprometimento cognitivo e melhorar a qualidade de vida.</p>
+    
+    <div class="image-container">
+        <img src="img/alzheimer.png" alt="Tratamento do Alzheimer" class="standard-img" width="500px">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SeniorCare</p>
+    </footer>
+
+    <script>
+        function scrollToSection() {
+            const element = document.getElementById("aumento");
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>
