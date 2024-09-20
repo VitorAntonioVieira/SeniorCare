@@ -34,19 +34,19 @@ section {
 }
 
 h1, h2 {
-    color: #05668D;
+    color: #00598f;
 }
 
 h3 {
-    color: #05668D;
+    color: #00598f;
     margin-top: 10px;
 }
 
 .highlight {
-    background-color: #B7E4C7; /* Cor intermediária escura */
+    background-color: rgba(149, 213, 178); /* Cor intermediária escura */
     padding: 10px;
     border-radius: 5px;
-    color: white;
+    color: #05668D;
 }
 
 .image-container {
