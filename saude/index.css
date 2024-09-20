@@ -7,10 +7,10 @@ body {
 }
 
 header {
-    background-color: #B7E4C7; /* Cor mais escura da paleta */
+   background-color: white;
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header-container {
@@ -33,12 +33,13 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    color: #05668D;
+ h1 {
+    color:#51b788;
+    margin-top: 80px;
 }
 
-h3 {
-    color: #05668D;
+h2 {
+    color: #000000;
     margin-top: 10px;
 }
 
@@ -59,20 +60,54 @@ h3 {
     max-width: 80%; /* Mesma largura para todas as imagens */
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
 }
 
 footer {
     background-color: #116198; /* Cor escura */
     color: white;
     text-align: center;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     position: relative; /* Mudança para evitar sobreposição */
     width: 100%;
     bottom: 0;
     margin-top: 20px;
 }
 
-.logo{
-    width: 500px;
+#logoheader{
+    height: 70px;
+    margin-left: 20px;
+}
+#content1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #b7e4c7;
+}
+h1{
+    color: #51b788;
+}
+#info{
+    padding: 55px;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#alzheimer{
+  margin-right: 60px;
+  height: 650px;
+}
+h3{
+    margin-top: 30px;
+    text-align: justify;
+}
+#maisinfo{
+    background-color: #333;
+    color: white;
+    height: 50px;
+    width: 200px;
+    margin-top: 30px;
+    border-radius: 25px;
+    font-size: medium   ;
 }
