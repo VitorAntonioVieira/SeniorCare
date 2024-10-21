@@ -18,7 +18,7 @@
     <nav>
       <div class="nav__header">
         <div class="nav__logo">
-          <a href="#"><span>t</span>Agency</a>
+        <img src="./seniorcarelogo.png" alt = "img"/>
         </div>
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>
