@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Pesquisa de Cuidadores</title>
 
     <style>
@@ -14,7 +14,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #eaeaea;
+            background-color: #ffff;
             transition: background-color 0.3s;
         }
         header {
@@ -63,7 +63,7 @@
         }
 
         .navbar a:hover {
-            color: #4CAF50; /* Cor ao passar o mouse */
+            color: #449972; /* Cor ao passar o mouse */
         }
 
         .search-container {
@@ -81,7 +81,7 @@
         }
 
         #searchInput:focus {
-            border: 1px solid #4CAF50;
+            border: 1px solid #449972;
             outline: none;
         }
 
@@ -126,7 +126,7 @@
         }
 
         .button {
-            background-color: #4CAF50;
+            background-color: #449972;
             border: none;
             color: white;
             padding: 10px;
@@ -138,7 +138,7 @@
         }
 
         .button:hover {
-            background-color: #45a049;
+            background-color: #449972;
             transform: translateY(-2px);
         }
 
@@ -200,7 +200,7 @@
         }
 
         .alert-button {
-            background-color: #4CAF50;
+            background-color: #449972;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -210,7 +210,7 @@
         }
 
         .alert-button:hover {
-            background-color: #45a049;
+            background-color: #449972;
         }
 
         @keyframes fadeIn {
@@ -220,18 +220,24 @@
     </style>
 </head>
 <body>
-    <header>
-        <img id="logoheader" src="img/seniorcarelogo.png" alt="logo">
-    </header>
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.php">Início</a></li>
-            <li><a href="sobre.php">Sobre Nós</a></li>
-            <li><a href="cuidadores.php">Cuidadores</a></li>
-            <li><a href="contato.php">Contato</a></li>
-        </ul>
+<nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+        <img src="./seniorcarelogo.png" alt = "img"/>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.php">Início</a></li>
+        <li><a href="#skill">Skills</a></li>
+        <li><a href="pesquisa.php">pesquisa</a></li>
+        <li><a href="cadastro.php">Cadastro</a></li>
+        <li><a href="cadastro.php"></a></li>
+     
     </nav>
+
 
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Buscar cuidadores..." onkeyup="filterCards()">

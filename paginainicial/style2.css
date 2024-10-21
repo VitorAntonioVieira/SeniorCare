@@ -1,14 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
+    background-color: #fff;
+    color: #fff;
     margin: 0;
     padding: 20px;
 }
 
 h1 {
     text-align: center;
-    color: #4CAF50; /* Verde */
+    color: #449972; /* Verde */
 }
 
 form {
@@ -39,7 +39,7 @@ textarea {
 }
 
 input[type="submit"] {
-    background-color: #4CAF50; /* Verde */
+    background-color: #449972; /* Verde */
     color: white;
     padding: 10px;
     border: none;
@@ -49,7 +49,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049; /* Verde escuro */
+    background-color: #449972; /* Verde escuro */
 }
 body {
     font-family: Arial, sans-serif;
@@ -90,7 +90,7 @@ h1 {
 
 .search-button {
     padding: 10px 15px;
-    background-color: #28a745;
+    background-color: #449972;
     color: white;
     border: none;
     border-radius: 5px;

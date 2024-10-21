@@ -12,7 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Web Design Mastery | tAgency</title>
+    <title> Senior Care</title>
   </head>
   <body>
     <nav>
@@ -25,120 +25,87 @@
         </div>
       </div>
       <ul class="nav__links" id="nav-links">
-        <li><a href="#about">About</a></li>
+        <li><a href="#about">Início</a></li>
         <li><a href="#skill">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#review">Testimonials</a></li>
-        <li><a href="assets/CV.pdf" download="">Download CV</a></li>
-      </ul>
-      <div class="nav__btn">
-        <a href="assets/CV.pdf" download="">Download CV</a>
-      </div>
+        <li><a href="pesquisa.php">pesquisa</a></li>
+        <li><a href="cadastro.php">Cadastro</a></li>
+        <button class="btn">Login</button>
+     
     </nav>
 
     <header class="section__container header__container" id="about">
       <div class="header__image">
-        <img src="assets/header.png" alt="header" />
+      <img src="./alzheimer.png" alt = "header"/>
       </div>
       <div class="header__content">
-        <p class="section__subheader">Welcome</p>
-        <h1>I have <span>Creative Design</span> Experience</h1>
+       
+        <h1>Bem-vindo à <span>plataforma Senior Care </span></h1>
         <p class="section__description">
-          Welcome to my personal portfolio! With a passion for turning ideas
-          into visually stunning digital experiences, I specialize in crafting
-          unique, user-friendly designs.
+        Um espaço dedicado ao bem-estar da pessoa idosa, com informações sobre legislação, saúde, entretenimento, trabalho e previdência.
         </p>
         <div class="header__btns">
-          <button class="btn">Contact Me</button>
-          <a href="#">
-            View Portfolio
-            <span><i class="ri-arrow-right-up-line"></i></span>
-          </a>
+          <button class="btn">Saiba Mais</button>
+          
         </div>
       </div>
     </header>
 
-    <section class="section__container stats__container">
-      <div class="stats__card">
-        <h4>80+</h4>
-        <p>Satisfied clients</p>
-      </div>
-      <div class="stats__divider"></div>
-      <div class="stats__card">
-        <h4>200+</h4>
-        <p>Project completed</p>
-      </div>
-      <div class="stats__divider"></div>
-      <div class="stats__card">
-        <h4>99+</h4>
-        <p>Reviews given</p>
-      </div>
-    </section>
+    
 
     <section class="section__container skill__container" id="skill">
       <div class="skill__content">
-        <p class="section__subheader">My Skills</p>
         <h2 class="section__header">
-          Why Hire Me For Your Next <span>Project?</span>
+        Por que escolher   <span>a Senior Care</span>
         </h2>
         <p class="section__description">
-          My commitment to quality, attention to detail, and passion for
-          innovation ensure that every project is a success.
+        Na Senior Care, nosso compromisso com a qualidade e atenção aos detalhes assegura o sucesso de cada iniciativa.
         </p>
-        <div class="skill__btn">
-          <button class="btn">Hire Me</button>
-        </div>
+       
       </div>
-      <div class="skill__grid">
-        <div class="skill__card">
-          <span><i class="ri-pulse-line"></i></span>
-          <h4>Visual Design</h4>
-          <p>
-            Creating stunning, user-friendly interfaces that captivate and
-            engage.
-          </p>
-        </div>
-        <div class="skill__card">
-          <span><i class="ri-pencil-ruler-2-line"></i></span>
-          <h4>Design Prototype</h4>
-          <p>
-            Developing interactive prototypes & designs to visualize and refine
-            your ideas.
-          </p>
-        </div>
-        <div class="skill__card">
-          <span><i class="ri-graduation-cap-line"></i></span>
-          <h4>UX Research</h4>
-          <p>
-            Conducting thorough research to ensure intuitive and effective user
-            experiences.
-          </p>
-        </div>
-      </div>
-    </section>
+  <div class="skill__grid">
+    <div class="skill__card">
+      <span><i class="ri-scales-3-line"></i></span> <!-- Ícone de martelo de juiz para Legislação -->
+      <h4>Legislação</h4>
+      <p>
+        Entenda os direitos e benefícios garantidos às pessoas idosas por lei, com atualizações constantes sobre as normas vigentes.
+      </p>
+    </div>
+    <div class="skill__card">
+      <span><i class="ri-heart-pulse-line"></i></span> <!-- Ícone de coração com pulsação para Saúde -->
+      <h4>Saúde</h4>
+      <p>
+        Oferecemos orientações sobre cuidados de saúde, dicas de bem-estar e informações sobre prevenção de doenças comuns na terceira idade.
+      </p>
+    </div>
+    <div class="skill__card">
+      <span><i class="ri-gamepad-line"></i></span> <!-- Ícone de controle de videogame para Entretenimento -->
+      <h4>Entretenimento</h4>
+      <p>
+        Sugestões de atividades e conteúdos voltados para o lazer e diversão, promovendo o engajamento e qualidade de vida para idosos.
+      </p>
+    </div>
+  </div>
+</section>
+
 
     <section class="portfolio__container" id="portfolio">
       <div class="portfolio__content">
         <p class="section__subheader">Portfolio</p>
         <h2 class="section__header">
-          My Creative Works Latest <span>Projects</span>
+        Bem-Estar <span>da Pessoa Idosa</span>
         </h2>
         <p class="section__description">
-          From sleek web applications to dynamic user interfaces, these works
-          highlight my ability to bring unique ideas to life.
+        Um espaço dedicado ao bem-estar da pessoa idosa, onde você encontra tudo o que precisa para se manter informado e atualizado
         </p>
-        <div class="portfolio__btn">
-          <button class="btn">Show More</button>
-        </div>
+    
       </div>
       <div class="portfolio__image__wrapper">
         <div class="portfolio__image">
-          <img src="assets/portfolio-1.jpg" alt="portfolio" />
-          <img src="assets/portfolio-2.png" alt="portfolio" />
-          <img src="assets/portfolio-3.png" alt="portfolio" />
-          <img src="assets/portfolio-4.png" alt="portfolio" />
-          <img src="assets/portfolio-5.png" alt="portfolio" />
-          <img src="assets/portfolio-6.png" alt="portfolio" />
+          <img src="fotinha.jpg" alt="portfolio" />
+          <img src="fotinha2.jpg" alt="portfolio" />
+          <img src="fotinha3.jpg" alt="portfolio" />
+          <img src="fotinha4.jpg" alt="portfolio" />
+          <img src="fotinha5.jpg" alt="portfolio" />
         </div>
       </div>
     </section>
