@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #D8F3DC; /* Cor mais clara da paleta */
+    background-color: #D8F3DC;
     color: #333;
     margin: 0;
     padding: 0;
@@ -33,7 +33,7 @@ nav a {
 }
 
 .btn-registrar {
-    background-color: #52B788; /* Cor intermediária da paleta */
+    background-color: #52B788;
     color: #fff;
     padding: 10px 15px;
     border-radius: 5px;
@@ -41,37 +41,63 @@ nav a {
 }
 
 .main-content {
-    background-color: #D8F3DC; /* Cor mais clara da paleta */
+    background-color: #D8F3DC;
     padding: 40px 20px;
     text-align: center;
 }
 
 .search-section {
-    background-color: #B7E4C7; /* Cor intermediária */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #B7E4C7;
     padding: 30px;
     border-radius: 15px;
     margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.search-section input {
+.search-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.search-text h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.search-bar input {
     padding: 12px;
     font-size: 16px;
-    margin-right: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-.search-section button {
+.search-bar button {
     padding: 12px;
     font-size: 16px;
-    background-color: #52B788; /* Cor intermediária */
+    background-color: #52B788;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.illustration {
+    flex: 1;
+}
+
+.illustration img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .cards-container {
@@ -82,7 +108,7 @@ nav a {
 }
 
 .card {
-    background-color: #B7E4C7; /* Cor intermediária */
+    background-color: #B7E4C7;
     padding: 20px;
     border-radius: 10px;
     width: 300px;
@@ -92,7 +118,7 @@ nav a {
 
 .card h3 {
     margin-bottom: 15px;
-    color: #05668D; /* Cor mais escura */
+    color: #05668D;
 }
 
 .card p {
@@ -102,7 +128,7 @@ nav a {
 
 .card button {
     padding: 12px;
-    background-color: #52B788; /* Cor intermediária */
+    background-color: #52B788;
     border: none;
     color: white;
     border-radius: 5px;
@@ -128,7 +154,7 @@ nav a {
 .news-card h3 {
     font-size: 18px;
     margin-bottom: 15px;
-    color: #05668D; /* Cor mais escura */
+    color: #05668D;
 }
 
 .news-card p {
@@ -137,7 +163,7 @@ nav a {
 }
 
 .news-card button {
-    background-color: #52B788; /* Cor intermediária */
+    background-color: #52B788;
     color: white;
     border: none;
     padding: 10px;
@@ -159,7 +185,7 @@ nav a {
 }
 
 footer {
-    background-color: #116198; /* Cor escura */
+    background-color: #116198;
     color: white;
     text-align: center;
     padding-top: 10px;

@@ -1,70 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-          .content-auto {
-            content-visibility: auto;
-          }
-        }
-      </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            DEFAULT: 'rgb(216, 243, 220)',
-                            100: 'rgb(183, 228, 199)',
-                            200: 'rgb(149, 213, 178)',
-                            300: 'rgb(116, 198, 157)',
-                            400: 'rgb(82, 183, 136)'
-                        },
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="css.css">
     <title>SeniorCare</title>
 </head>
+<body>
 
-<body class="bg-primary">
-    <header
-        class="w-full h-[90px] p-[20px] bg-white flex justify-between md:justify-evenly items-center drop-shadow-lg">
-        <img class="w-[40%] md:w-[25%] lg:w-[10%]" src="./src/img/seniorcarelogo.png" alt="Logo">
-        <button onclick="" class="w-[32px] sm:hidden">
-            <span class="material-symbols-outlined text-[32px]">
-                menu
-            </span>
-        </button>
-        <nav class="hidden md:flex w-[50%] gap-[40%] items-center">
-            <ul class="flex gap-5">
-                <li class="hover:translate-y-[-5px] hover:font-semibold hover:font-600"><a href="#">Home</a></li>
-                <li class="hover:translate-y-[-5px] hover:font-semibold hover:font-600"><a href="#">Home</a></li>
-                <li class="hover:translate-y-[-5px] hover:font-semibold hover:font-600"><a href="#">Home</a></li>
-                <li class="hover:translate-y-[-5px] hover:font-semibold hover:font-600"><a href="#">Home</a></li>
-                <li class="hover:translate-y-[-5px] hover:font-semibold hover:font-600"><a href="#">Home</a></li>
-            </ul>
-            <div class="">
-                <span>Login</span>
-                <button>Registrar</button>
-            </div>
-            <div class="">
-
-            </div>
+    <header>
+        <img src="../SeniorCare/saude/img/seniorcarelogo.png" alt="SeniorCare Logo">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Fórum Know How</a>
+            <a href="C:/Users/Aluno/Documents/GitHub/SeniorCare/previdencia/index.html">Previdência</a>
+            <a href="#">Matérias</a>
+            <a href="#">Login</a>
+            <a href="C:/Users/Aluno/Documents/GitHub/SeniorCare/saude/cadastro.php" class="btn-registrar">Registrar</a>
         </nav>
     </header>
-</body>
 
+<section class="main-content">
+    <div class="search-section">
+        <div class="search-text">
+            <h2>Procure um cuidador de idosos perto de você</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Seu endereço">
+                <input type="text" placeholder="Sua cidade">
+                <button>Procurar</button>
+            </div>
+        </div>
+        <div class="illustration">
+            <img src="../SeniorCare/saude/uploads/image1.png" alt="Ilustração de cuidadores" class="responsive-img">
+        </div>
+    </div>
+
+    <div class="cards-container">
+        <div class="card">
+            <img src="../SeniorCare/saude/uploads/forum.png"  width="300px" height="200px" alt="Imagem Fórum" class="standard-img">
+            <h3>Alguma Dúvida?</h3>
+            <p>Entre no nosso fórum e sane todas elas</p>
+            <button>Entrar no Fórum</button>
+        </div>
+        <div class="card">
+            <img src="../SeniorCare/saude/uploads/saibamais.png" width="300px" height="200px" alt="Imagem Previdência" class="standard-img">
+            <h3>Precisando de ajuda com a previdência?</h3>
+            <p>Use nosso calculador de previdência</p>
+            <button>Entrar no Calculador</button>
+        </div>
+    </div>
+
+    <h1>Matérias e notícias</h1>
+
+    <div class="news-section">
+        <div class="news-card">
+            <img src="../SeniorCare/saude/uploads/estatuto.png"  width="320px" height="200px" alt="Imagem Estatuto" class="standard-img">
+            <h3>Disposições do Estatuto do Idoso e de outras providências</h3>
+            <p>São instituídos pela legislação brasileira destinados alguns direitos e seguridades aos idosos com idade igual ou superior a 60 anos.</p>
+            <button>Ver mais</button>
+        </div>
+        <div class="news-card">
+            <img src="../SeniorCare/saude/uploads/sociedad.png"  width="320px" height="200px" alt="Imagem Sociedade" class="standard-img">
+            <h3>Como a pessoa idosa pode ser "útil" para a sociedade?</h3>
+            <p>A pessoa idosa pode se inserir na sociedade de maneira qualificada, assumir papéis relevantes e até mesmo reiniciar um novo ciclo de trabalho.</p>
+            <button>Ver mais</button>
+        </div>
+    </div>
+    
+    <div class="arrow">
+        <button>&#10095;</button>
+    </div>
+</section>
+
+</body>
 </html>
