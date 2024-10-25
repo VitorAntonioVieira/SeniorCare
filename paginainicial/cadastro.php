@@ -38,8 +38,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Cuidadores</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link para o CSS -->
+    <link rel="stylesheet" href="style2.css"> <!-- Link para o CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
 </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title> Senior Care</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+        <img src="./seniorcarelogo.png" alt = "img"/>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.php">Início</a></li>
+        <li><a href="#skill">Skills</a></li>
+        <li><a href="pesquisa.php">Pesquisa</a></li>
+        <li><a href="cadastro.php">Cadastro</a></li>
+        <li><a href="cadastro.php"></a></li>
+        
+     
+    </nav>
 <body>
     <h1>Cadastro de Cuidadores</h1>
     <form action="" method="POST" enctype="multipart/form-data">
