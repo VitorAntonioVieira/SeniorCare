@@ -177,14 +177,18 @@ nav {
 }
 
 .header__image {
-  position: relative;
-  isolation: isolate;
+  width: 100%; /* Se quiser que a imagem preencha todo o espaço disponível */
+  height: auto; /* Mantém a proporção da imagem */
+  display: flex; /* Flexbox para centralizar a imagem */
+  justify-content: center; /* Centraliza horizontalmente */
 }
 
 .header__image img {
-  max-width: 350px;
-  margin-inline: auto;
+  width: 500px; /* Aumente a largura para o tamanho desejado */
+  height: auto; /* Mantém a proporção da imagem */
+  margin: 0; /* Remove margens */
 }
+
 
 .header__image::before,
 .header__image::after {

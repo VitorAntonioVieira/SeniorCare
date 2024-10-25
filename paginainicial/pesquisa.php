@@ -109,13 +109,14 @@
         }
 
         .card img {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            margin: 10px 0;
-            transition: transform 0.3s;
-        }
-
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+        transition: transform 0.3s;
+    }
         .card img:hover {
             transform: scale(1.1);
         }
@@ -231,8 +232,8 @@
       </div>
       <ul class="nav__links" id="nav-links">
         <li><a href="index.php">Início</a></li>
-        <li><a href="#skill">Skills</a></li>
-        <li><a href="pesquisa.php">pesquisa</a></li>
+        <li><a href="#skill">Serviços</a></li>
+   
         <li><a href="cadastro.php">Cadastro</a></li>
         <li><a href="cadastro.php"></a></li>
      
