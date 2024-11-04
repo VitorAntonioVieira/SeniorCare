@@ -25,11 +25,11 @@
         </div>
       </div>
       <ul class="nav__links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#tour">Pesquisa</a></li>
-        <li><a href="#package">conteudo</a></li>
-        <li><a href="#contact">Contato</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Forum-Igor/index.php">Fórum</a></li>
+        <li><a href="../Saúde-léoekaua/index.php">Saúde</a></li>
+        <li><a href="../Lazer-Cibeli/index.php">Lazer</a></li>
+        <li><a href="../Previdencia-rafaelerovida/index.php">Previdência</a></li>
         <li><a href="#">login</a></li>
       </ul>
       <div class="nav__btns">
