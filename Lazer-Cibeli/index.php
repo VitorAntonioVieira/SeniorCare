@@ -12,6 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="lazer.css" />
+    <link rel="shortcut icon" type="image/jpg" href="../assets/icon.png"/>
     <title>Lazer para Idosos | SeniorCare</title>
   </head>
   <body>
