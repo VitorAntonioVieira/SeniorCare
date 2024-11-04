@@ -14,13 +14,23 @@
         }
         .navbar {
             background-color: white;
-            padding: 15px;
+            padding: 25px; /* Aumentado para deixar o cabeçalho maior */
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            align-items: center; /* Alinha a logo e os links verticalmente */
+            justify-content: ; /* Espaça a logo e os links */
+        }
+        .navbar .logo {
+            margin-right: 10px; /* Reduzido para aproximar a logo do menu */
+        }
+        .navbar .logo img {
+            height: 40px; /* Altura da logo */
+        }
+        .navbar .menu {
+            display: flex;
+            align-items: center; /* Alinha os links e o botão verticalmente */
         }
         .navbar a {
-            color: #3d3d3d;
+            color: #558b6e; /* Mudança da cor das letras para verde */
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
@@ -41,7 +51,7 @@
             background-color: #7bb988;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px; /* Aumentado para ocupar mais espaço na página */
             margin: 30px auto;
             padding: 15px;
             background-color: #ffffff;
@@ -51,20 +61,21 @@
         .section {
             display: flex;
             gap: 20px;
-            align-items: center;
+            align-items: flex-start; /* Alinha os itens ao topo */
             margin-bottom: 30px;
         }
         .section h2 {
             color: #558b6e;
             font-size: 24px;
             margin-bottom: 10px;
+            flex: 1; /* Permite que o texto ocupe espaço disponível */
         }
         .section p {
             font-size: 16px;
             line-height: 1.6;
         }
         .section img {
-            max-width: 200px;
+            max-width: 400px; /* Aumentando o tamanho das imagens */
             height: auto;
             border-radius: 5px;
         }
@@ -127,14 +138,14 @@
 
 <div class="navbar">
     <div class="logo">
-        <img src="img/logo.png" alt="Logo" style="height: 40px;">
+        <img src="img/logo.png" alt="Logo">
     </div>
     <div class="menu">
         <a href="../index.html">Home</a>
         <a href="../Forum-Igor/index.php">Fórum</a>
-        <a href="../Saúde-léoekaua/index.php">Saude</a>
+        <a href="../Saúde-léoekaua/index.php">Saúde</a>
         <a href="../Lazer-Cibeli/index.php">Lazer</a>
-        <a href="../Previdencia-rafaelerovida/index.php">Presidencia</a>
+        <a href="../Previdencia-rafaelerovida/index.php">Previdência</a>
         <a href="#">Login</a>
         <button class="btn-registrar">Registrar</button>
     </div>
@@ -142,11 +153,11 @@
 
 <div class="container">
     <div class="section">
-        <img src="img/previdencia1.png" alt="Imagem da Previdência">
         <div>
             <h2>O que é previdência?</h2>
             <p>A previdência é um seguro social em que o trabalhador participa através de contribuições mensais. O benefício dessa contribuição é garantir ao trabalhador segurado uma renda na hora em que ele não puder mais trabalhar — ou seja, quando ele se aposentar.</p>
         </div>
+        <img src="img/previdencia1.png" alt="Imagem da Previdência">
     </div>
 
     <div class="section">
@@ -181,18 +192,18 @@
                 </tr>
             </table>
         </div>
+        <img src="img/previdencia2.png" alt="Imagem sobre aposentadoria">
     </div>
 
     <div class="section">
-        <img src="img/previdencia2.png" alt="Imagem sobre aposentadoria">
         <div>
             <h2>Qual as idades mínimas para se aposentar?</h2>
             <p>Homens devem ter ao menos 65 anos e ter contribuído por pelo menos 15 anos, enquanto mulheres devem ter pelo menos 63 anos e também ter contribuído por pelo menos 15 anos. É importante destacar que, para as aposentadorias rurais, as regras são um pouco diferentes, e a idade mínima é reduzida para 60 anos para homens e 55 anos para mulheres.</p>
         </div>
+        <img src="img/previdencia3.png" alt="Imagem sobre tempo de contribuição">
     </div>
 
     <div class="section">
-        <img src="img/previdencia3.png" alt="Imagem sobre tempo de contribuição">
         <div>
             <h2>O que é o tempo de contribuição?</h2>
             <p>O tempo de contribuição é o tempo em que existiu atividade compreendida pelo INSS. É quanto tempo o segurado (trabalhador ou facultativo) pagou à Previdência Social, sendo que esses recolhimentos podem ter sido realizados pelo empregador ou pelo próprio segurado.</p>
@@ -219,12 +230,12 @@
             <ul class="footer__links">
                 <li>
                     <a href="#">
-                        <span><i class="ri-phone-fill"></i></span> (12) 3653-1943
+                        <span><i class="ri-phone-fill"></i></span> (12) 3653-8500
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <span><i class="ri-record-mail-line"></i></span> ce207@sesisp.org.br
+                        <span><i class="ri-record-mail-line"></i></span> sesicaçapava@sesisp.org.br
                     </a>
                 </li>
                 <li>
