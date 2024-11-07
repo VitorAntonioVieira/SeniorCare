@@ -1,177 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/jpg" href="../assets/icon.png"/>
-    <link rel="stylesheet" href="css/.style.css">
-    <link rel="stylesheet" href="Previdencia-rafaelerovida/.style.css">
-
-
-
-    <title>Previdência</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f9f1;
-            color: #3d3d3d;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f9f1;
-            color: #3d3d3d;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Botões */
-        .btn-registrar {
-            background-color: #97d9a0;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-registrar:hover {
-            background-color: #7bb988;
-        }
-
-        /* Container principal */
-        .container {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Seções */
-        .section {
-            display: flex;
-            gap: 30px;
-            align-items: flex-start;
-            margin-bottom: 40px;
-        }
-
-        .section h2 {
-            color: #558b6e;
-            font-size: 28px;
-            margin-bottom: 15px;
-            flex: 1;
-        }
-
-        .section p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        .section img {
-            max-width: 450px;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        /* Tabela */
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        .table, .table th, .table td {
-            border: 1px solid #d1d1d1;
-        }
-
-        .table th, .table td {
-            padding: 12px;
-            text-align: center;
-            font-size: 16px;
-        }
-
-        .table th {
-            background-color: #e3f2e1;
-            font-weight: bold;
-        }
-
-        /* Rodapé */
-        .footercontainer {
-            background-color: white;
-            padding: 30px 20px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            color: #3d3d3d;
-            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .footer_logo img {
-            height: 60px;
-        }
-
-        .footer__col h1, .footer__col h4 {
-            color: #558b6e;
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
-
-        .footer__col p {
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .footer__links {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer__links li {
-            margin-bottom: 8px;
-        }
-
-        .footer__links a {
-            color: #3d3d3d;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .footer__bar {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 12px;
-            color: #3d3d3d;
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .section {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .section img {
-                max-width: 100%;
-                margin-top: 20px;
-            }
-
-            .footercontainer {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .footer__col {
-                margin-bottom: 20px;
-                text-align: center;
-            }
-        }
-        @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 :root {
   --primary-color: #5cb3a9;
@@ -192,7 +19,116 @@ a{
 color: #fff;
 }
 
+.skill__card span {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
 
+.skill__card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.skill__card p {
+  color: var(--text-light);
+  line-height: 1.5rem;
+}
+
+/* Container principal do portfólio em duas colunas */
+.portfolio__container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Coluna esquerda menor para o título, direita maior para o carrossel */
+  gap: 10rem;
+  align-items: start;
+  margin-top: 3rem; /* Adiciona espaço acima do carrossel */
+  margin-left: 5rem; /* Adiciona margem à esquerda para mover o conteúdo para a direita */
+}
+
+/* Estilo da seção de conteúdo do título */
+.portfolio__content {
+  padding-inline: 1rem;
+}
+
+.portfolio__content .section__header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.portfolio__content .section__description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Wrapper do carrossel para esconder a rolagem extra */
+.portfolio__image__wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Container das imagens do carrossel */
+.portfolio__image {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  width: max-content;
+  animation: scroll 45s linear infinite;
+}
+
+/* Estilo das imagens individuais */
+.portfolio__image img {
+  max-width: 300px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+/* Animação de rolagem contínua */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .portfolio__container {
+    grid-template-columns: 1fr; /* Ajusta para uma única coluna em telas menores */
+    text-align: center;
+    margin-top: 1.5rem; /* Reduz o espaço em telas menores */
+  }
+  
+  .portfolio__image {
+    justify-content: center;
+  }
+}
+
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+.review__container {
+  padding-bottom: 0;
+}
+
+.review__container .section__header {
+  max-width: 450px;
+}
+
+.swiper {
+  padding-block: 4rem 5rem;
+  width: 100%;
+}
+
+.swiper-slide {
+  max-width: 400px;
+}
 
 .review__card {
   padding: 1.5rem;
@@ -587,7 +523,175 @@ header::before {
   color: var(--extra-light);
 }
 
+.showcase__container {
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+}
 
+.showcase__image img {
+  max-width: 400px;
+  margin-inline: auto;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.showcase__content h4 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.showcase__content p {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.showcase__content .btn {
+  width: 80%;
+  height: 80%;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  background-image: url("../assets/fundoheader.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+.banner__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.banner__card {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: var(--extra-light);
+  border-radius: 2rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.banner__card h4 {
+  font-size: 5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.banner__card p {
+  color: var(--text-light);
+}
+
+.discover__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.discover__card {
+  padding: 2rem 1rem;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 1rem;
+}
+
+.discover__card:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.discover__card span {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background-color: rgba(40, 135, 255, 0.1);
+  border-radius: 100%;
+}
+
+.discover__card h4 {
+  max-width: 150px;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.destination__card p {
+  color: var(--text-light);
+}
+
+.swiper {
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.swiper-slide {
+  min-width: 375px;
+}
+
+.client__card {
+  padding: 5px;
+  background-color: var(--extra-light);
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+.client__card:hover {
+  background-color: var(--primary-color);
+}
+
+.client__content {
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: calc(1rem - 5px);
+}
+
+.client__rating {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.client__content p {
+  color: var(--text-dark);
+}
+
+.client__details {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.client__details img {
+  max-width: 50px;
+  border-radius: 100%;
+}
+
+.client__details h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+.client__card:hover h4 {
+  color: var(--white);
+}
+
+.client__details h5 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.client__card:hover h5 {
+  color: var(--extra-light);
+}
 
 footer {
   background-color: var(--extra-light);
@@ -791,6 +895,32 @@ footer {
     text-align: left;
   }
 
+  .header__btns {
+    justify-content: flex-start;
+  }
+
+  .header__image {
+    grid-column: 4/8;
+    position: relative;
+    isolation: isolate;
+    height: 100%;
+  }
+
+  .header__image img {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    height: 92%;
+    width: unset;
+  }
+
+  .destination__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .journey__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   .showcase__container {
     grid-template-columns: repeat(3, 1fr);
@@ -817,6 +947,70 @@ footer {
   }
 }
 
+@media (width > 1200px) {
+  .header__content {
+    padding-inline: 1rem 0;
+  }
+
+  .destination__grid {
+    gap: 2rem;
+  }
+}
+/* Responsividade geral */
+@media (max-width: 1024px) {
+  .header__content h1 {
+    font-size: 3rem;
+  }
+
+  .header__btns .btn {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Ajustando a navegação em telas pequenas */
+@media (max-width: 768px) {
+  .nav__header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav__logo .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav__menu__btn {
+    font-size: 1.5rem;
+  }
+
+  .nav__links {
+    gap: 1.5rem;
+  }
+
+  .portfolio__container {
+    grid-template-columns: 1fr; /* Uma coluna para telas pequenas */
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .portfolio__image__wrapper {
+    overflow-x: scroll; /* Permite rolagem horizontal */
+  }
+
+  .portfolio__image img {
+    max-width: 100%; /* Ajusta as imagens para caberem na tela */
+    margin: 0 auto;
+  }
+
+  .destination__grid, .journey__grid, .showcase__container, .banner__container, .discover__grid {
+    grid-template-columns: 1fr; /* Deixa os itens em uma coluna */
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr; /* Uma coluna para o footer em telas pequenas */
+  }
+}
 
 /* Ajuste para fontes e botões em dispositivos móveis */
 @media (max-width: 540px) {
@@ -838,177 +1032,3 @@ footer {
     font-size: 1rem;
   }
 }
-
-        .btn-registrar {
-            background-color: #97d9a0;
-            color: #fff;
-            padding: 8px 15px;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .btn-registrar:hover {
-            background-color: #7bb988;
-        }
-       
-        .footercontainer {
-            background-color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            color: #3d3d3d;
-        }
-        .footer_logo img {
-            height: 50px;
-        }
-        .footer__col h1, .footer__col h4 {
-            color: #558b6e;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        .footer__col p {
-            font-size: 14px;
-            line-height: 1.5;
-        }
-        .footer__links {
-            list-style: none;
-            padding: 0;
-        }
-        .footer__links li {
-            margin-bottom: 5px;
-        }
-        .footer__links a {
-            color: #3d3d3d;
-            text-decoration: none;
-        }
-        .footer__bar {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 12px;
-            color: #3d3d3d;
-        }
-    </style>
-</head>
-<body>
-
-<nav>
-  <div class="nav__header">
-    <div class="nav__logo">
-      <img src="img/seniorcarelogo.png" alt="img" />
-    </div>
-    <div class="nav__menu__btn" id="menu-btn">
-      <i class="ri-menu-line"></i>
-    </div>
-  </div>
-  <ul class="nav__links" id="nav-links">
-    <li><a href="/SeniorCare-1/index.html">Home</a></li>
-    <li><a href="Previdencia-rafaelerovida/index.php">Previdência</a></li>
-    <li><a href="Forum-Igor/index.php">Fórum</a></li>
-    <li><a href="#package">Conteúdo</a></li>
-    <li><a href="#contact">Contato</a></li>
-    <li><a href="#">Login</a></li>
-  </ul>
-  <div class="nav__btns">
-    <button class="btn"><a href="Login-Vitor/index.php">Login</a></button>
-    <button class="btn"><a href="logout.php">Logout</a></button>
-  </div>
-</nav>
-
-
-<div class="container">
-    <div class="section">
-        <div>
-            <h2>O que é previdência?</h2>
-            <p>A previdência é um seguro social em que o trabalhador participa através de contribuições mensais. O benefício dessa contribuição é garantir ao trabalhador segurado uma renda na hora em que ele não puder mais trabalhar — ou seja, quando ele se aposentar.</p>
-        </div>
-        <img src="img/previdencia1.png" alt="Imagem da Previdência">
-    </div>
-
-    <div class="section">
-        <div>
-            <h2>Sistema de pontos: O que é e como funciona</h2>
-            <p>A aposentadoria por pontos é uma regra de aposentadoria aplicada quando o trabalhador atinge uma pontuação mínima. Esta pontuação consiste na soma do tempo de contribuição e da idade do segurado. No entanto, não basta apenas atingir os pontos, deve-se cumprir o tempo mínimo exigido para o grupo, que, pela legislação, é de 30 anos para mulheres e 35 anos para homens.</p>
-            <table class="table">
-                <tr>
-                    <th>Ano</th>
-                    <th>Pontuação Masculina</th>
-                    <th>Pontuação Feminina</th>
-                </tr>
-                <tr>
-                    <td>2020</td>
-                    <td>97</td>
-                    <td>87</td>
-                </tr>
-                <tr>
-                    <td>2021</td>
-                    <td>98</td>
-                    <td>88</td>
-                </tr>
-                <tr>
-                    <td>2022</td>
-                    <td>99</td>
-                    <td>89</td>
-                </tr>
-                <tr>
-                    <td>2023</td>
-                    <td>100</td>
-                    <td>90</td>
-                </tr>
-            </table>
-        </div>
-        <img src="img/previdencia2.png" alt="Imagem sobre aposentadoria">
-    </div>
-
-    <div class="section">
-        <div>
-            <h2>Qual as idades mínimas para se aposentar?</h2>
-            <p>Homens devem ter ao menos 65 anos e ter contribuído por pelo menos 15 anos, enquanto mulheres devem ter pelo menos 63 anos e também ter contribuído por pelo menos 15 anos. É importante destacar que, para as aposentadorias rurais, as regras são um pouco diferentes, e a idade mínima é reduzida para 60 anos para homens e 55 anos para mulheres.</p>
-        </div>
-        <img src="img/previdencia3.png" alt="Imagem sobre tempo de contribuição">
-    </div>
-
-    <div class="section">
-        <div>
-            <h2>O que é o tempo de contribuição?</h2>
-            <p>O tempo de contribuição é o tempo em que existiu atividade compreendida pelo INSS. É quanto tempo o segurado (trabalhador ou facultativo) pagou à Previdência Social, sendo que esses recolhimentos podem ter sido realizados pelo empregador ou pelo próprio segurado.</p>
-        </div>
-    </div>
-</div>
-
-<footer id="contato">
-  <div class="section__container footer__container">
-    <div class="footer__col">
-      <div class="footer__logo">
-        <a href="#" class="logo">SeniorCare</a>
-      </div>
-      <p>Um espaço dedicado ao bem-estar da pessoa idosa</p>
-      <ul class="footer__socials">
-        <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
-        <li><a href="#"><i class="ri-instagram-line"></i></a></li>
-        <li><a href="#"><i class="ri-youtube-line"></i></a></li>
-      </ul>
-    </div>
-    <div class="footer__col">
-      <h4>Links Rápidos</h4>
-      <ul class="footer__links">
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Voos</a></li>
-        <li><a href="#">Hotéis</a></li>
-        <li><a href="#">Cruzeiros</a></li>
-      </ul>
-    </div>
-    <div class="footer__col">
-      <h4>Fale Conosco</h4>
-      <ul class="footer__links">
-        <li><a href="#"><span><i class="ri-phone-fill"></i></span> +12 9876543210</a></li>
-        <li><a href="#"><span><i class="ri-record-mail-line"></i></span> Senioe@care</a></li>
-        <li><a href="#"><span><i class="ri-map-pin-2-fill"></i></span> Caçapava, SP</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer__bar">
-    Copyright © 2024 Senior care. Todos os direitos reservados.
-  </div>
-</footer>
