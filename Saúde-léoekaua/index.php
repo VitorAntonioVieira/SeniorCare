@@ -1,15 +1,69 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/jpg" href="../assets/icon.png"/>
-
-
-
-
-    <title>Doenças Comuns em Idosos</title>
-    <style>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+      <link rel="stylesheet" href="../Lazer-Cibeli/lazer.css" />
+      <link rel="shortcut icon" type="image/jpg" href="../assets/icon.png"/>
+      <title>Saúde dos Idosos | SeniorCare</title>
+    </head>
+    <body>
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <img src="../Lazer-Cibeli/seniorcarelogo.png" alt = "img"/>
+            </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../Forum-Igor/index.php">Fórum</a></li>
+          <li><a href="./index.php">Saúde</a></li>
+          <li><a href="../Lazer-Cibeli/index.php">Lazer</a></li>
+          <li><a href="../Previdencia-rafaelerovida/index.php">Previdência</a></li>
+          <li><a href="#">login</a></li>
+        </ul>
+        <div class="nav__btns">
+          <button class="btn">login</button>
+        </div>
+      </nav>
+      <header id="home" style="
+    position: relative;
+    padding: 50px 20px;
+    color: #ffffff;
+    background: url('./img/doente.jpg') no-repeat center center / cover;
+  ">
+    <div class="header__container" style="max-width: 800px;">
+      <h1 id="tittle1" style="font-size: 2.5em; font-weight: bold;">
+        Cuidados para Idosos: <span style="color:  #78c0a8; ">Saúde, Prevenção e Bem-Estar</span> 
+      </h1>
+      <!-- Parágrafo alinhado à esquerda -->
+      <p class="section__description" style="
+        font-size: 1.9em;
+        line-height: 1.6;
+        color: white;
+        font-weight: bold;
+        background-color: #78c0a8;  
+        text-align: justify;
+        margin: 20px 0;
+        padding: 10px;
+        color: white;
+      ">
+        À medida que envelhecemos, é natural que certas doenças, como pressão alta, diabetes e problemas de memória, fiquem mais comuns. Por isso, cuidar da saúde com exames regulares, boa alimentação e atividades físicas é essencial para viver com mais disposição e bem-estar.
+      </p>
+    </div>
+  </header>
+<style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f9f1;
@@ -100,54 +154,6 @@
             font-weight: bold;
         }
 
-        /* Rodapé */
-        .footercontainer {
-            background-color: white;
-            padding: 30px 20px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            color: #3d3d3d;
-            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .footer_logo img {
-            height: 60px;
-        }
-
-        .footer__col h1, .footer__col h4 {
-            color: #558b6e;
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
-
-        .footer__col p {
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .footer__links {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer__links li {
-            margin-bottom: 8px;
-        }
-
-        .footer__links a {
-            color: #3d3d3d;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .footer__bar {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 12px;
-            color: #3d3d3d;
-        }
-
         /* Responsividade */
         @media (max-width: 768px) {
             .section {
@@ -160,20 +166,11 @@
                 margin-top: 20px;
             }
 
-            .footercontainer {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .footer__col {
-                margin-bottom: 20px;
-                text-align: center;
-            }
         }
         @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 :root {
-  --primary-color: #5cb3a9;
+  --primary-color: #219b6a;
   --primary-color-dark:#68d69d;
   --text-dark: #219b6a;
   --text-light: #737373;
@@ -200,13 +197,6 @@ color: #fff;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
 }
 
-.header__container {
-  display: grid;
-  grid-template-columns:
-    minmax(0, 1fr)
-    repeat(5, minmax(0, calc(var(--max-width) / 5)))
-    minmax(0, 1fr);
-}
 
 .header__content {
   grid-column: 2/4;
@@ -417,9 +407,6 @@ header::before {
   z-index: -1;
 }
 
-.header__container {
-  display: grid;
-}
 
 .header__content {
   padding: 4rem 1rem;
@@ -588,97 +575,6 @@ header::before {
 
 
 
-footer {
-  background-color: var(--extra-light);
-}
-
-.footer__container {
-  display: grid;
-  gap: 4rem 2rem;
-}
-
-.footer__col p {
-  max-width: 300px;
-  margin-block: 2rem;
-  color: var(--text-light);
-}
-
-.footer__socials {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.footer__socials a {
-  display: inline-block;
-  padding: 7px 10px;
-  font-size: 1.25rem;
-  color: var(--white);
-  background-color: var(--primary-color);
-  border-radius: 100%;
-}
-
-.footer__socials a:hover {
-  background-color: var(--primary-color-dark);
-}
-
-.footer__col h4 {
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-dark);
-}
-
-.footer__links {
-  display: grid;
-  gap: 1rem;
-}
-
-.footer__links a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--text-light);
-}
-
-.footer__links a:hover {
-  color: var(--primary-color);
-}
-
-.footer__links a span {
-  font-size: 1.25rem;
-}
-
-.footer__col form {
-  display: grid;
-  gap: 1rem;
-}
-
-.footer__col input {
-  padding: 0.75rem;
-  font-size: 1rem;
-  color: var(--text-dark);
-  background-color: var(--white);
-  border: 1px solid var(--text-light);
-  border-radius: 5px;
-}
-
-.footer__col input::placeholder {
-  color: var(--text-light);
-}
-
-.footer__col .btn {
-  border-radius: 5px;
-}
-
-.footer__bar {
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: var(--text-light);
-  text-align: center;
-}
-
 
 @media (width > 540px) {
   .destination__grid {
@@ -702,13 +598,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer__col:last-child {
-    grid-area: 2/1/3/2;
-  }
 }
 
 @media (width > 768px) {
@@ -774,13 +663,6 @@ footer {
     margin-top: 0;
   }
 
-  .header__container {
-    grid-template-columns:
-      minmax(0, 1fr)
-      repeat(5, minmax(0, calc(var(--max-width) / 5)))
-      minmax(0, 1fr);
-  }
-
   .header__content {
     grid-column: 2/4;
     padding-block: 8rem;
@@ -807,13 +689,6 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .footer__container {
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  }
-
-  .footer__col:last-child {
-    grid-area: unset;
-  }
 }
 
 
@@ -829,13 +704,6 @@ footer {
     padding: 0.75rem 1.5rem;
   }
 
-  .footer__container {
-    gap: 2rem;
-  }
-
-  .footer__socials a {
-    font-size: 1rem;
-  }
 }
 
         .btn-registrar {
@@ -851,70 +719,8 @@ footer {
             background-color: #7bb988;
         }
        
-        .footercontainer {
-            background-color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            color: #3d3d3d;
-        }
-        .footer_logo img {
-            height: 50px;
-        }
-        .footer__col h1, .footer__col h4 {
-            color: #558b6e;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        .footer__col p {
-            font-size: 14px;
-            line-height: 1.5;
-        }
-        .footer__links {
-            list-style: none;
-            padding: 0;
-        }
-        .footer__links li {
-            margin-bottom: 5px;
-        }
-        .footer__links a {
-            color: #3d3d3d;
-            text-decoration: none;
-        }
-        .footer__bar {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 12px;
-            color: #3d3d3d;
-        }
+      
     </style>
-</head>
-<body>
-
-<nav>
-  <div class="nav__header">
-    <div class="nav__logo">
-      <img src="img/logo.png" alt="img" />
-    </div>
-    <div class="nav__menu__btn" id="menu-btn">
-      <i class="ri-menu-line"></i>
-    </div>
-  </div>
-  <ul class="nav__links" id="nav-links">
-    <li><a href="/SeniorCare-1/index.html">Home</a></li>
-    <li><a href="Previdencia-rafaelerovida/index.php">Previdência</a></li>
-    <li><a href="Forum-Igor/index.php">Fórum</a></li>
-    <li><a href="#package">Conteúdo</a></li>
-    <li><a href="#contact">Contato</a></li>
-    <li><a href="#">Login</a></li>
-  </ul>
-  <div class="nav__btns">
-    <button class="btn"><a href="Login-Vitor/index.php">Login</a></button>
-    <button class="btn"><a href="logout.php">Logout</a></button>
-  </div>
-</nav>
-
 
 <div class="container">
     <div class="section">
@@ -957,39 +763,57 @@ footer {
 </div>
 
 </div>
+      <footer id="contact">
+    <div class="section__container footer__container"><div class="footer__logo">
+          <a href="#" class="logo">
+            <img src="../Lazer-Cibeli/seniorcarelogo.png" alt="SeniorCare Logo" />
+          </a>
+        </div>
+   
 
-<footer id="contato">
-  <div class="section__container footer__container">
     <div class="footer__col">
-      <div class="footer__logo">
-        <a href="#" class="logo">SeniorCare</a>
-      </div>
-      <p>Um espaço dedicado ao bem-estar da pessoa idosa</p>
-      <ul class="footer__socials">
-        <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
-        <li><a href="#"><i class="ri-instagram-line"></i></a></li>
-        <li><a href="#"><i class="ri-youtube-line"></i></a></li>
+      <h4>SESI Caçapava</h4>
+      <ul class="footer__links">
+        <li>
+          <a href="#">
+            <span><i class="ri-phone-fill"></i></span> (12) 3653-1943
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span><i class="ri-record-mail-line"></i></span> ce207@sesisp.org.br
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span><i class="ri-map-pin-2-fill"></i></span> Caçapava, SP
+          </a>
+        </li>
       </ul>
     </div>
+
     <div class="footer__col">
-      <h4>Links Rápidos</h4>
+      <h4>SENAI Félix Guisard</h4>
       <ul class="footer__links">
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Voos</a></li>
-        <li><a href="#">Hotéis</a></li>
-        <li><a href="#">Cruzeiros</a></li>
-      </ul>
-    </div>
-    <div class="footer__col">
-      <h4>Fale Conosco</h4>
-      <ul class="footer__links">
-        <li><a href="#"><span><i class="ri-phone-fill"></i></span> +12 9876543210</a></li>
-        <li><a href="#"><span><i class="ri-record-mail-line"></i></span> Senioe@care</a></li>
-        <li><a href="#"><span><i class="ri-map-pin-2-fill"></i></span> Caçapava, SP</a></li>
+        <li>
+          <a href="#">
+            <span><i class="ri-phone-fill"></i></span> (12) 3609-5701
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span><i class="ri-record-mail-line"></i></span> senaitaubate@sp.senai.br
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span><i class="ri-map-pin-2-fill"></i></span> Taubaté, SP
+          </a>
+        </li>
       </ul>
     </div>
   </div>
   <div class="footer__bar">
-    Copyright © 2024 Senior care. Todos os direitos reservados.
+    Copyright © 2024 SeniorCare.
   </div>
 </footer>
