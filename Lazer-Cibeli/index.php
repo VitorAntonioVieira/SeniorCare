@@ -81,6 +81,7 @@ A prática de lazer entre idosos é fundamental para promover o bem-estar físic
         No aspecto social e emocional, o lazer para os idosos desempenha um papel crucial na redução da solidão e do isolamento, comuns na terceira idade. Ao participarem de atividades em grupo, os idosos têm a oportunidade de criar e fortalecer laços, favorecendo o sentimento de pertencimento e valorização pessoal. Essas interações sociais também ajudam a manter a mente ativa, estimulando a memória e a cognição, o que é essencial para prevenir o declínio cognitivo e condições como a depressão. Assim, o lazer não é apenas uma forma de entretenimento, mas um investimento em saúde e felicidade para os idosos.
         </p>
         <div class="showcase__btn">
+          
 
 </div>
 
@@ -205,8 +206,27 @@ A prática de lazer entre idosos é fundamental para promover o bem-estar físic
           Os jogos de tabuleiro, como Scrabble ou Bingo, estimulam o raciocínio e a socialização, oferecendo uma experiência interativa e divertida para grupos.
         </p>
       </div>
+      <h2 class="section__header">Jogo da Memória</h2>
+      <p>Clique no botão abaixo para iniciar o jogo da memória!</p>
+      <button id="playButton">Jogar</button> <!-- Botão Play para iniciar o jogo -->
+    </section>
+
+    <div class="modal" id="gameModal">
+  <div class="modal-content">
+    <h2>Jogo da Memória</h2>
+    <p>Combine os pares de emojis para avançar de fase!</p>
+    <p id="timer">Tempo: <span id="timeRemaining">30</span>s</p>
+    <div id="gameBoard"></div>
+    <div class="level-info">
+      <p id="levelInModal">Fase: 1</p> <!-- Informações sobre a fase no modal -->
+    </div>
+    <button id="resetButton">Reiniciar Jogo</button>
+    <button class="close-btn" onclick="closeModal()">Fechar</button>
+  </div>
     </div>
 </section>
+
+
 
 <footer id="contact">
     <div class="section__container footer__container"><div class="footer__logo">
@@ -214,13 +234,7 @@ A prática de lazer entre idosos é fundamental para promover o bem-estar físic
             <img src="./seniorcarelogo.png" alt="SeniorCare Logo" />
           </a>
         </div>
-    <div class="footer__col">
-      
-      <h1>SeniorCare</h1>
-      <p>
-      A SeniorCare é uma plataforma criada por alunos de Desenvolvimento de Sistemas para informar os idosos sobre seus direitos, promovendo o empoderamento e a conscientização.
-      </p>
-    </div>
+   
 
     <div class="footer__col">
       <h4>SESI Caçapava</h4>
@@ -268,4 +282,145 @@ A prática de lazer entre idosos é fundamental para promover o bem-estar físic
     Copyright © 2024 SeniorCare.
   </div>
 </footer>
+<script>
+const playButton = document.getElementById("playButton");
+const gameModal = document.getElementById("gameModal");
+const gameBoard = document.getElementById("gameBoard");
+const resetButton = document.getElementById("resetButton");
+const timeRemainingDisplay = document.getElementById("timeRemaining");
+const levelInModal = document.getElementById("levelInModal");
 
+let level = 1;
+let timer;
+let timeRemaining;
+let cards;
+let firstCard, secondCard;
+const emojis = ["😀", "😂", "😍", "😎", "🤩", "🥳", "😴", "😱", "😇", "🤖"];
+
+playButton.addEventListener("click", () => {
+  openModal();
+  startGame();
+});
+
+resetButton.addEventListener("click", resetGame);
+
+function openModal() {
+  gameModal.style.display = "flex";
+}
+
+function closeModal() {
+  gameModal.style.display = "none";
+  resetGame();
+}
+
+function startGame() {
+  gameBoard.innerHTML = "";
+  clearInterval(timer);
+  timeRemaining = 30 + level * 5;
+  timeRemainingDisplay.innerText = timeRemaining;
+  levelInModal.innerText = `Fase: ${level}`;
+  timer = setInterval(updateTimer, 1000);
+
+  const cardValues = createCardValues(level);
+  cards = shuffleCards(createCards(cardValues));
+  renderCards(cards);
+}
+
+function updateTimer() {
+  timeRemaining--;
+  timeRemainingDisplay.innerText = timeRemaining;
+  if (timeRemaining === 0) {
+    alert("Tempo esgotado! Tente novamente.");
+    resetGame();
+  }
+}
+
+function createCardValues(level) {
+  const numberOfPairs = level + 2;
+  const values = [];
+  for (let i = 0; i < numberOfPairs; i++) {
+    values.push(emojis[i % emojis.length], emojis[i % emojis.length]);
+  }
+  return values;
+}
+
+function createCards(values) {
+  return values.map((value) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.dataset.value = value;
+    card.innerHTML = "?";
+    card.addEventListener("click", handleCardClick);
+    return card;
+  });
+}
+
+function shuffleCards(cards) {
+  for (let i = cards.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [cards[i], cards[j]] = [cards[j], cards[i]]; // Troca os elementos
+  }
+  return cards;
+}
+
+function renderCards(cards) {
+  gameBoard.append(...cards);
+}
+
+function handleCardClick(event) {
+  const clickedCard = event.target;
+  if (clickedCard.classList.contains("flipped") || clickedCard.classList.contains("matched")) {
+    return;
+  }
+
+  clickedCard.classList.add("flipped");
+  clickedCard.innerHTML = clickedCard.dataset.value;
+
+  if (!firstCard) {
+    firstCard = clickedCard;
+  } else {
+    secondCard = clickedCard;
+    checkForMatch();
+  }
+}
+
+function checkForMatch() {
+  if (firstCard.dataset.value === secondCard.dataset.value) {
+    firstCard.classList.add("matched");
+    secondCard.classList.add("matched");
+    checkForWin();
+    resetCards();
+  } else {
+    setTimeout(resetCards, 1000);
+  }
+}
+
+function resetCards() {
+  firstCard.classList.remove("flipped");
+  secondCard.classList.remove("flipped");
+  firstCard.innerHTML = "?";
+  secondCard.innerHTML = "?";
+  firstCard = null;
+  secondCard = null;
+}
+
+function checkForWin() {
+  const matchedCards = document.querySelectorAll(".matched");
+  if (matchedCards.length === cards.length) {
+    alert(`Você venceu o nível ${level}!`);
+    level++;
+    resetGame();
+  }
+}
+
+function resetGame() {
+  clearInterval(timer);
+  firstCard = null;
+  secondCard = null;
+  gameBoard.innerHTML = "";
+  timeRemaining = 30 + level * 5;
+  timeRemainingDisplay.innerText = timeRemaining;
+  levelInModal.innerText = `Fase: ${level}`;
+  closeModal();
+}
+</script>
