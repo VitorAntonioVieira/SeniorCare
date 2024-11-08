@@ -929,7 +929,7 @@ footer {
     <?php if (!isset($_SESSION['usuario_id'])): ?>
       <li><a href="Login-Vitor/index.php">Login</a></li>
     <?php endif; ?>
->>>>>>> a3aea1f1488ffc7af6513a37f7de2717e0f14209
+
   </ul>
   <div class="nav__btns">
     <?php if (!isset($_SESSION['usuario_id'])): ?>
