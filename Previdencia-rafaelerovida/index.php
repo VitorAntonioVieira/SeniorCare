@@ -902,7 +902,7 @@ footer {
     </div>
   </div>
   <ul class="nav__links" id="nav-links">
-    <li><a href="/SeniorCare-1/index.html">Home</a></li>
+    <li><a href="/SeniorCare-1/index.html">Página Inicial</a></li>
     <li><a href="Previdencia-rafaelerovida/index.php">Previdência</a></li>
     <li><a href="Forum-Igor/index.php">Fórum</a></li>
     <li><a href="#package">Conteúdo</a></li>

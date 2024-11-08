@@ -30,7 +30,7 @@ session_start();
         </div>
       </div>
       <ul class="nav__links" id="nav-links">
-        <li><a href="index.php">Home</a></li>
+        <li><a href="index.php">Página Inicial</a></li>
         <li><a href="./Forum-Igor/index.php">Fórum</a></li>
         <li><a href="./Saúde-léoekaua/index.php">Saúde</a></li>
         <li><a href="./Lazer-Cibeli/index.php">Lazer</a></li>
@@ -156,7 +156,17 @@ session_start();
       </div>
     </section>
 
-    
+    <section class="find-caregiver__container" id="find-caregiver">
+  <div class="section__header">
+    <h2>Encontre um Cuidador de Idosos</h2>
+    <p>
+      Se você está procurando cuidadores especializados para proporcionar um cuidado de qualidade e seguro, clique no botão abaixo para encontrar profissionais qualificados.
+    </p>
+  </div>
+  <div class="find-caregiver__btn">
+    <a href="encontrar-cuidador.php" class="btn">Encontrar Cuidador</a>
+  </div>
+</section>
    
     
 <footer id="contact">
