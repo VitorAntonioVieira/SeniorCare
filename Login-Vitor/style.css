@@ -64,7 +64,7 @@ body {
     padding-right: 1em;
 }
 
-.form input[type="button"] {
+.form input[type="submit"] {
     height: 3.5em;
     border: 1px solid var(--m-green);
     border-radius: .5em;
@@ -82,5 +82,34 @@ body {
 }
 
 #keep_btn {
-    
+    width: 32px;
+}
+
+#login_btn {
+    transition: .5s;
+}
+
+#login_btn:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+#or_label {
+    display: flex;
+    justify-content: center;
+    color: #666;
+}
+
+#signin_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #449972;
+    font-weight: 700;
+    transition: .5s;
+}
+
+#signin_btn:hover {
+    letter-spacing: 2px;
 }
