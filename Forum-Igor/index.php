@@ -80,31 +80,7 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/jpg" href="../assets/icon.png"/>
-    <link rel="stylesheet" href="../styles.css" />
-    <title>Fórum | SeniorCare</title>
-<body>
-    <nav>
-      <div class="nav__header">
-        <div class="nav__logo">
-          <img src="../Lazer-Cibeli/seniorcarelogo.png" alt="img" />
-        </div>
-        
-      </div>
-      <ul class="nav__links" id="nav-links">
-        <li><a href="./index.php">Página Inicial</a></li>
-        <li><a href="./Forum-Igor/index.php">Fórum</a></li>
-        <li><a href="./Saúde-léoekaua/index.php">Saúde</a></li>
-        <li><a href="./Lazer-Cibeli/index.php">Lazer</a></li>
-        <li><a href="./Previdencia-rafaelerovida/index.php">Previdência</a></li>
-        <div class="back">
-<!-- Botão para voltar à página anterior -->
-<button class="back-button"><a href="../index.php">voltar</a></button>
-</div>
-        <div class="nav__menu__btn" id="menu-btn">
-          <i class="ri-menu-line"></i>
-        </div>
-      </ul>
-      </nav>
+    <title>Fórum</title>
     <style>
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
@@ -129,116 +105,6 @@ $result = $conn->query($sql);
             padding: 20px;
             border-radius: 10px;
         }
-        nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #219b6a;
-    padding: 15px 20px;
-    position: relative;
-}
-
-.nav__header .nav__logo img {
-    width: 150px;
-    height: auto;
-}
-
-.nav__links {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav__links li {
-    margin-left: 20px;
-}
-
-.nav__links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px;
-    display: block;
-}
-
-.nav__links a:hover {
-    background-color: #68d69d;
-    border-radius: 5px;
-}
-
-.nav__menu__btn {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-}
-
-.back {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-}
-
-.back-button {
-    background-color: #219b6a;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5rem;
-    font-size: 1rem;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-}
-
-.back-button:hover {
-    background-color: #68d69d;
-}
-
-/* Menu Responsivo - Mostra no mobile */
-@media screen and (max-width: 768px) {
-    .nav__links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        background-color: #219b6a;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        padding: 10px;
-    }
-
-    .nav__links.active {
-        display: flex;
-    }
-
-    .nav__menu__btn {
-        display: block;
-    }
-
-    .nav__links li {
-        margin-left: 0;
-        padding: 10px 0;
-        text-align: center;
-    }
-}
-
-/* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #e9f5e9;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-button {
-    cursor: pointer;
-}
         .pergunta, .resposta {
             background-color: #fff;
             margin: 15px 0;
@@ -360,10 +226,13 @@ button {
 </head>
 <body>
 
-
+<div class="back">
+<!-- Botão para voltar à página anterior -->
+<button class="back-button"><a href="../index.php">voltar</a></button>
+</div>
 <div class="forum">
     <?php if (isset($_SESSION['usuario_id'])): ?>
-        <h2>Enviar uma nova publicação</h2>
+        <h2>Enviar uma nova pergunta</h2>
         <form action="" method="POST">
             <input type="text" name="titulo" placeholder="Título da pergunta" required>
             <textarea name="descricao" placeholder="Descrição da pergunta" required></textarea>
@@ -371,7 +240,7 @@ button {
         </form>
     <?php endif; ?>
 
-    <h2>Publicações Recentes</h2>
+    <h2>Perguntas Recentes</h2>
     <?php
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
