@@ -180,6 +180,9 @@
   width: auto;
 }
 
+.h4 {
+  text-align: justify;
+}
 
 * {
   padding: 0;
