@@ -150,7 +150,6 @@ session_start();
           <img src="./assets/fotinha.jpg" alt="portfolio" />
           <img src="./assets/fotinha2.jpg" alt="portfolio" />
           <img src="./assets/fotinha4.jpg" alt="portfolio" />
-          <img src="./assets/fotinha4.jpg" alt="portfolio" />
           <img src="./assets/fotinha5.jpg" alt="portfolio" />
         </div>
       </div>
@@ -164,7 +163,7 @@ session_start();
     </p>
   </div>
   <div class="find-caregiver__btn">
-    <a href="encontrar-cuidador.php" class="btn">Encontrar Cuidador</a>
+    <a href="./Pesquisa-yasmin/pesquisa.php" class="btn">Encontrar Cuidador</a>
   </div>
 </section>
    

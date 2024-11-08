@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo.png" type="image/png">
-    <link rel="stylesheet" href="styles.css">
-    <title>Pesquisa de Cuidadores</title>
+    <link rel="stylesheet" href="../styles.css">
+    <title>Conheça Cuidadores | SeniorCare</title>
 
     <style>
         body {
@@ -224,20 +224,31 @@
 <nav>
       <div class="nav__header">
         <div class="nav__logo">
-        <img src="./seniorcarelogo.png" alt = "img"/>
+          <img src="../Lazer-Cibeli/seniorcarelogo.png" alt="img" />
         </div>
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>
         </div>
       </div>
       <ul class="nav__links" id="nav-links">
-        <li><a href="index.php">Início</a></li>
-        <li><a href="#skill">Serviços</a></li>
-   
-        <li><a href="cadastro.php">Cadastro</a></li>
-        <li><a href="cadastro.php"></a></li>
-     
-    </nav>
+        <li><a href="../index.php">Página Inicial</a></li>
+        <li><a href="../Forum-Igor/index.php">Fórum</a></li>
+        <li><a href="../Saúde-léoekaua/index.php">Saúde</a></li>
+        <li><a href="../Lazer-Cibeli/index.php">Lazer</a></li>
+        <li><a href="../Previdencia-rafaelerovida/index.php">Previdência</a></li>
+        <li><a href="Login-Vitor/index.php">Login</a></li>
+      </ul>
+      <?php if (!isset($_SESSION['usuario_id'])): ?>
+
+    <?php endif; ?>
+  </ul>
+  <div class="nav__btns">
+    <?php if (!isset($_SESSION['usuario_id'])): ?>
+      <button class="btn"><a href="Login-Vitor/index.php">Login</a></button>
+    <?php else: ?>
+      <button class="btn"><a href="logout.php">Logout</a></button>
+    <?php endif; ?>
+    </nav>  
 
 
     <div class="search-container">

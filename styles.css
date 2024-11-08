@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 /* Estilo da seção Encontre um Cuidador */
 .find-caregiver__container {
-  background-color: #f4f4f4; /* Cor de fundo suave */
+  background-color: #219b6a; /* Cor de fundo suave */
   padding: 50px 20px; /* Espaçamento interno */
   text-align: center; /* Centraliza o conteúdo */
   margin-top: 50px; /* Espaço acima da seção */
@@ -9,19 +9,19 @@
 
 .find-caregiver__container .section__header h2 {
   font-size: 2.5rem; /* Tamanho grande para o título */
-  color: #333; /* Cor do texto do título */
+  color: #ffffff; /* Cor do texto do título */
   margin-bottom: 15px; /* Espaço abaixo do título */
 }
 
 .find-caregiver__container .section__header p {
   font-size: 1.2rem; /* Tamanho médio para a descrição */
-  color: #555; /* Cor mais suave para o texto */
+  color: #ffffff; /* Cor mais suave para o texto */
   line-height: 1.6; /* Espaçamento entre as linhas */
   margin-bottom: 30px; /* Espaço abaixo do parágrafo */
 }
 
 .find-caregiver__btn .btn {
-  background-color: #da2864; /* Cor do botão */
+  background-color: #68d69d;; /* Cor do botão */
   color: #fff; /* Cor do texto do botão */
   padding: 15px 30px; /* Espaçamento interno do botão */
   font-size: 1.1rem; /* Tamanho do texto */
@@ -33,7 +33,7 @@
 }
 
 .find-caregiver__btn .btn:hover {
-  background-color: #c81f58; /* Cor do botão ao passar o mouse */
+  background-color: #68d69d; /* Cor do botão ao passar o mouse */
 }
 
 @media (max-width: 768px) {

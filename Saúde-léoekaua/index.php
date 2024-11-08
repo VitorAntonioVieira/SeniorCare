@@ -26,7 +26,7 @@
           </div>
         </div>
         <ul class="nav__links" id="nav-links">
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.php">Página Inicial</a></li>
           <li><a href="../Forum-Igor/index.php">Fórum</a></li>
           <li><a href="./index.php">Saúde</a></li>
           <li><a href="../Lazer-Cibeli/index.php">Lazer</a></li>
@@ -39,7 +39,7 @@
       </nav>
       <header id="home" style="
     position: relative;
-    padding: 50px 20px;
+    padding: 0px 20px;
     color: #ffffff;
     background: url('./img/doente.jpg') no-repeat center center / cover;
   ">
@@ -56,8 +56,9 @@
         background-color: #78c0a8;  
         text-align: justify;
         margin: 20px 0;
-        padding: 10px;
+        padding: px;
         color: white;
+        widht: 400px;
       ">
         À medida que envelhecemos, é natural que certas doenças, como pressão alta, diabetes e problemas de memória, fiquem mais comuns. Por isso, cuidar da saúde com exames regulares, boa alimentação e atividades físicas é essencial para viver com mais disposição e bem-estar.
       </p>
@@ -809,33 +810,7 @@ footer {
 </head>
 
 <body>
-<nav>
-  <div class="nav__header">
-    <div class="nav__logo">
-      <img src="img/logo.png" alt="img" />
-    </div>
-    <div class="nav__menu__btn" id="menu-btn">
-      <i class="ri-menu-line"></i>
-    </div>
-  </div>
-  <ul class="nav__links" id="nav-links">
-  <li><a href="../index.php">Home</a></li>
-        <li><a href="../Forum-Igor/index.php">Fórum</a></li>
-        <li><a href="../Saúde-léoekaua/index.php">Saúde</a></li>
-        <li><a href="../Lazer-Cibeli/index.php">Lazer</a></li>
-        <li><a href="../Previdencia-rafaelerovida/index.php">Previdência</a></li>   
-    <?php if (!isset($_SESSION['usuario_id'])): ?>
-      <li><a href="../Login-Vitor/index.php">Login</a></li>
-    <?php endif; ?>
-  </ul>
-  <div class="nav__btns">
-    <?php if (!isset($_SESSION['usuario_id'])): ?>
-      <button class="btn"><a href="../Login-Vitor/index.php">Login</a></button>
-    <?php else: ?>
-      <button class="btn"><a href="../logout.php">Logout</a></button>
-    <?php endif; ?>
-  </div>
-</nav>
+
 <div class="container">
     <div class="section">
         <div>
@@ -873,38 +848,59 @@ footer {
     </div>
 </div>
 </div>
-<footer id="contato">
-  <div class="section__container footer__container">
+
+
+<footer id="contact">
+    <div class="section__container footer__container"><div class="footer__logo">
+          <a href="#" class="logo">
+            <img src="../Lazer-Cibeli/seniorcarelogo.png" alt="SeniorCare Logo" />
+          </a>
+        </div>
+   
+
     <div class="footer__col">
-      <div class="footer__logo">
-        <a href="#" class="logo">SeniorCare</a>
-      </div>
-      <p>Um espaço dedicado ao bem-estar da pessoa idosa</p>
-      <ul class="footer__socials">
-        <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
-        <li><a href="#"><i class="ri-instagram-line"></i></a></li>
-        <li><a href="#"><i class="ri-youtube-line"></i></a></li>
+      <h4>SESI Caçapava</h4>
+      <ul class="footer__links">
+        <li>
+          <a href="#">
+            <span><i class="ri-phone-fill"></i></span> (12) 3653-1943
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span><i class="ri-record-mail-line"></i></span> ce207@sesisp.org.br
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span><i class="ri-map-pin-2-fill"></i></span> Caçapava, SP
+          </a>
+        </li>
       </ul>
     </div>
+
     <div class="footer__col">
-      <h4>Links Rápidos</h4>
+      <h4>SENAI Félix Guisard</h4>
       <ul class="footer__links">
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Voos</a></li>
-        <li><a href="#">Hotéis</a></li>
-        <li><a href="#">Cruzeiros</a></li>
-      </ul>
-    </div>
-    <div class="footer__col">
-      <h4>Fale Conosco</h4>
-      <ul class="footer__links">
-        <li><a href="#"><span><i class="ri-phone-fill"></i></span> +12 9876543210</a></li>
-        <li><a href="#"><span><i class="ri-record-mail-line"></i></span> Senioe@care</a></li>
-        <li><a href="#"><span><i class="ri-map-pin-2-fill"></i></span> Caçapava, SP</a></li>
+        <li>
+          <a href="#">
+            <span><i class="ri-phone-fill"></i></span> (12) 3609-5701
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span><i class="ri-record-mail-line"></i></span> senaitaubate@sp.senai.br
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span><i class="ri-map-pin-2-fill"></i></span> Taubaté, SP
+          </a>
+        </li>
       </ul>
     </div>
   </div>
   <div class="footer__bar">
-    Copyright © 2024 Senior care. Todos os direitos reservados.
+    Copyright © 2024 SeniorCare.
   </div>
 </footer>
