@@ -1,5 +1,20 @@
 <?php
 session_start();
+
+
+$host = 'localhost'; 
+$dbname = 'senior_care'; 
+$username = 'root';
+$password = ''; // S
+
+$conn = new mysqli($host, $username, $password, $dbname);
+
+// Verificar conexão
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -162,11 +177,94 @@ session_start();
       Se você está procurando cuidadores especializados para proporcionar um cuidado de qualidade e seguro, clique no botão abaixo para encontrar profissionais qualificados.
     </p>
   </div>
-  <div class="find-caregiver__btn">
-    <a href="./Pesquisa-yasmin/pesquisa.php" class="btn">Encontrar Cuidador</a>
+  <div class="cansada">
+    <a href="./pesquisa.php" class="btn">Encontrar Cuidador</a>
+    <a href="#" class="btn" id="openModalBtn">Cadastre-se como cuidador</a>
   </div>
 </section>
-   
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModalBtn">&times;</span>
+        <h2>Cadastro de Cuidador</h2>
+        <!-- Formulário de cadastro -->
+        <form action="" method="POST" enctype="multipart/form-data">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" name="telefone" id="telefone" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" id="endereco" required>
+
+            <label for="valor_servico">Valor do Serviço:</label>
+            <input type="text" name="valor_servico" id="valor_servico" required>
+
+            <label for="servicos_prestados">Serviços Prestados:</label>
+            <textarea name="servicos_prestados" id="servicos_prestados" required></textarea>
+
+            <label for="foto">Foto:</label>
+            <input type="file" name="foto" id="foto" required>
+
+            <button type="submit" class="btn">Cadastrar</button>
+        </form>
+    </div>
+</div>
+<script>
+    // Obtém o modal
+    var modal = document.getElementById('modal');
+    var openModalBtn = document.getElementById('openModalBtn');
+    var closeModalBtn = document.getElementById('closeModalBtn');
+
+    // Quando o botão "Cadastre-se como cuidador" é clicado, abre o modal
+    openModalBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // Quando o "X" é clicado, fecha o modal
+    closeModalBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Quando o usuário clica fora do modal, fecha o modal
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+<?php
+// Verifica se o formulário foi enviado
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome = $_POST['nome'];
+    $telefone = $_POST['telefone'];
+    $endereco = $_POST['endereco'];
+    $valor_servico = $_POST['valor_servico'];
+    $servicos_prestados = $_POST['servicos_prestados'];
+
+    // Processa o upload da foto
+    $foto = $_FILES['foto'];
+    $foto_path = 'uploads/' . basename($foto['name']);
+
+    // Move a foto para o diretório 'uploads'
+    if (move_uploaded_file($foto['tmp_name'], $foto_path)) {
+        // Insere os dados no banco de dados
+        $sql = "INSERT INTO Cuidadores (nome, telefone, endereco, valor_servico, servicos_prestados, foto) VALUES (?, ?, ?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssssss", $nome, $telefone, $endereco, $valor_servico, $servicos_prestados, $foto_path);
+        
+        if ($stmt->execute()) {
+            echo "<p>Cuidador cadastrado com sucesso!</p>";
+        } else {
+            echo "<p>Erro ao cadastrar o cuidador: " . $stmt->error . "</p>";
+        }
+        $stmt->close();
+    } else {
+        echo "<p>Erro ao fazer upload da foto.</p>";
+    }
+}
+?>
     
 <footer id="contact">
   <div class="section__container footer__container"><div class="footer__logo">

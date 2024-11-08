@@ -73,13 +73,21 @@
       </div>
       <div class="showcase__content">
         <h4>Importancia do Lazer para Idosos</h4>
-        <p>
-         
-A prática de lazer entre idosos é fundamental para promover o bem-estar físico, mental e social nessa fase da vida. Atividades de lazer como caminhadas, dança, jogos e encontros sociais ajudam a manter o corpo ativo, fortalecendo músculos e articulações e prevenindo o sedentarismo, que é um fator de risco para diversas doenças crônicas. Além disso, essas atividades proporcionam momentos de descontração e alegria, reduzindo o estresse e melhorando o humor, o que contribui para a qualidade de vida e longevidade. 
-        </p>
-        <p>
-        No aspecto social e emocional, o lazer para os idosos desempenha um papel crucial na redução da solidão e do isolamento, comuns na terceira idade. Ao participarem de atividades em grupo, os idosos têm a oportunidade de criar e fortalecer laços, favorecendo o sentimento de pertencimento e valorização pessoal. Essas interações sociais também ajudam a manter a mente ativa, estimulando a memória e a cognição, o que é essencial para prevenir o declínio cognitivo e condições como a depressão. Assim, o lazer não é apenas uma forma de entretenimento, mas um investimento em saúde e felicidade para os idosos.
-        </p>
+        <p class="h4">
+            A prática de lazer entre idosos é fundamental para promover o bem-estar físico, mental e social nessa fase
+            da vida. Atividades de lazer como caminhadas, dança, jogos e encontros sociais ajudam a manter o corpo
+            ativo, fortalecendo músculos e articulações e prevenindo o sedentarismo, que é um fator de risco para
+            diversas doenças crônicas. Além disso, essas atividades proporcionam momentos de descontração e alegria,
+            reduzindo o estresse e melhorando o humor, o que contribui para a qualidade de vida e longevidade.
+          </p>
+          <p class="h4">
+            No aspecto social e emocional, o lazer para os idosos desempenha um papel crucial na redução da solidão e do
+            isolamento, comuns na terceira idade. Ao participarem de atividades em grupo, os idosos têm a oportunidade
+            de criar e fortalecer laços, favorecendo o sentimento de pertencimento e valorização pessoal. Essas
+            interações sociais também ajudam a manter a mente ativa, estimulando a memória e a cognição, o que é
+            essencial para prevenir o declínio cognitivo e condições como a depressão. Assim, o lazer não é apenas uma
+            forma de entretenimento, mas um investimento em saúde e felicidade para os idosos.
+          </p>
         <div class="showcase__btn">
           
 

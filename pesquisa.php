@@ -1,4 +1,20 @@
-<?php include 'db.php'; ?>
+<?php 
+
+
+$host = 'localhost'; 
+$dbname = 'senior_care'; 
+$username = 'root';
+$password = ''; // S
+
+$conn = new mysqli($host, $username, $password, $dbname);
+
+// Verificar conexão
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -6,9 +22,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo.png" type="image/png">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <title>Conheça Cuidadores | SeniorCare</title>
-
+    <link rel="shortcut icon" type="image/jpg" href="assets/icon.png"/>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -224,18 +240,18 @@
 <nav>
       <div class="nav__header">
         <div class="nav__logo">
-          <img src="../Lazer-Cibeli/seniorcarelogo.png" alt="img" />
+          <img src="./Lazer-Cibeli/seniorcarelogo.png" alt="img" />
         </div>
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>
         </div>
       </div>
       <ul class="nav__links" id="nav-links">
-        <li><a href="../index.php">Página Inicial</a></li>
-        <li><a href="../Forum-Igor/index.php">Fórum</a></li>
-        <li><a href="../Saúde-léoekaua/index.php">Saúde</a></li>
-        <li><a href="../Lazer-Cibeli/index.php">Lazer</a></li>
-        <li><a href="../Previdencia-rafaelerovida/index.php">Previdência</a></li>
+        <li><a href="./index.php">Página Inicial</a></li>
+        <li><a href="./Forum-Igor/index.php">Fórum</a></li>
+        <li><a href="./Saúde-léoekaua/index.php">Saúde</a></li>
+        <li><a href="./Lazer-Cibeli/index.php">Lazer</a></li>
+        <li><a href="./Previdencia-rafaelerovida/index.php">Previdência</a></li>
         <li><a href="Login-Vitor/index.php">Login</a></li>
       </ul>
       <?php if (!isset($_SESSION['usuario_id'])): ?>
