@@ -26,7 +26,7 @@
         </div>
       </div>
       <ul class="nav__links" id="nav-links">
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.php">Home</a></li>
         <li><a href="../Forum-Igor/index.php">Fórum</a></li>
         <li><a href="../Saúde-léoekaua/index.php">Saúde</a></li>
         <li><a href="../Lazer-Cibeli/index.php">Lazer</a></li>

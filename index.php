@@ -53,7 +53,7 @@ session_start();
       <div class="header__container">
         <div class="header__content">
           
-          <h1>Bem-vindo à <span>Senior Care </span></h1>
+          <h1>Bem-vindo ao <span>Senior Care </span></h1>
           <div class="header__btns">
             <button class="btn">Saiba mais</button>
             <a href="#">

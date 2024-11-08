@@ -1,42 +1,56 @@
 <?php
-session_start();
-
-// Conexão com o banco de dados
+// Configuração do banco de dados
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "senior_care";
 
+// Criar conexão com o banco de dados
 $conn = new mysqli($servername, $username, $password, $dbname);
 
+// Verificar a conexão
 if ($conn->connect_error) {
-  die("Conexão falhou: " . $conn->connect_error);
+    die("Falha na conexão: " . $conn->connect_error);
 }
 
-// Verifica se o formulário de login foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $email = $_POST['email'];
-  $senha = $_POST['senha'];
+// Verificar se os dados foram enviados pelo formulário
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
 
-  // Consulta para verificar as credenciais
-  $sql = "SELECT id, Nome FROM usuario WHERE email = '$email' AND senha = '$senha'";
-  $result = $conn->query($sql);
+    // Validar se os campos não estão vazios
+    if (empty($email) || empty($senha)) {
+        echo "Todos os campos são obrigatórios.";
+        exit;
+    }
 
-  if ($result->num_rows == 1) {
-    // Login bem-sucedido
-    $row = $result->fetch_assoc();
-    $_SESSION['usuario_id'] = $row['id'];
-    $_SESSION['Nome'] = $row['Nome'];
+    // Consultar o banco de dados para encontrar o usuário
+    $sql = "SELECT * FROM usuario WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    // Redireciona para a página principal do fórum
-    header("Location: ../index.html");
-    exit;
-  } else {
-    // Login falhou
-    $erro = "E-mail ou senha incorretos.";
-  }
+    // Verificar se o usuário foi encontrado
+    if ($result->num_rows > 0) {
+        $user = $result->fetch_assoc();
+        
+        // Verificar se a senha está correta
+        if (password_verify($senha, $user['senha'])) {
+            // Iniciar sessão e redirecionar para a página inicial
+            session_start();
+            $_SESSION['usuario'] = $user['Nome'];
+            header("Location: ../index.html");
+            exit();
+        } else {
+            echo "Senha incorreta.";
+        }
+    } else {
+        echo "Usuário não encontrado.";
+    }
+
+    // Fechar a conexão
+    $stmt->close();
+    $conn->close();
 }
-
-// Fechar conexão
-$conn->close();
 ?>

@@ -82,6 +82,19 @@ $result = $conn->query($sql);
     <link rel="shortcut icon" type="image/jpg" href="../assets/icon.png"/>
     <title>Fórum</title>
     <style>
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+  --primary-color: #219b6a;
+  --primary-color-dark:#219b6a
+  --text-dark: #219b6a;
+  --text-light: #737373;
+  --extra-light: #f3f4f6;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
         body {
             font-family: Arial, sans-serif;
             background-color: #e9f5e9;
@@ -144,22 +157,79 @@ $result = $conn->query($sql);
         }
 
         .back-button {
-            margin-bottom: 20px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
+            padding: 0.75rem 1.5rem;
+            outline: none;
             border: none;
-            border-radius: 5px;
+            font-size: 1rem;
+            white-space: nowrap;
+            color: white;
+            background-color: #219b6a; 
+            border-radius: 5rem;
+            transition: 0.3s;
             cursor: pointer;
-            font-size: 16px;
+            text-decoration: none;
         }
+
+        button{
+            appearance: auto;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-variant-alternates: ;
+    font-variant-position: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    font-optical-sizing: ;
+    font-size-adjust: ;
+    font-kerning: ;
+    font-feature-settings: ;
+    font-variation-settings: ;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+        }
+
+        a{
+            text-decoration: none;
+            color: #f3f4f6;
+        }
+
+            .back-button:hover {
+     background-color: #68d69d;
+}
+        
+
+
     </style>
 </head>
 <body>
 
+<div class="back">
 <!-- Botão para voltar à página anterior -->
-<button class="back-button"><a href="../index.html">voltar</a></button>
-
+<button class="back-button"><a href="../index.php">voltar</a></button>
+</div>
 <div class="forum">
     <?php if (isset($_SESSION['usuario_id'])): ?>
         <h2>Enviar uma nova pergunta</h2>
