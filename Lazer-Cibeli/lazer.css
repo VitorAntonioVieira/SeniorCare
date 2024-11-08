@@ -180,6 +180,9 @@
   width: auto;
 }
 
+.h4 {
+  text-align: justify;
+}
 
 * {
   padding: 0;
@@ -875,7 +878,7 @@ footer {
   }
 
   .nav__links a {
-    color: var(--text-dark);
+    color: #219b6a;
   }
 
   .nav__links a:hover {
