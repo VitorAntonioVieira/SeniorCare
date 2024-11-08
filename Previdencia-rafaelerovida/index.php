@@ -914,7 +914,7 @@ footer {
 <nav>
   <div class="nav__header">
     <div class="nav__logo">
-      <img src="../assets/seniorcarelogo" alt="img" />
+      <img src="../assets/seniorcarelogo.png" alt="img" />
     </div>
     <div class="nav__menu__btn" id="menu-btn">
       <i class="ri-menu-line"></i>
