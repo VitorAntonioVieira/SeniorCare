@@ -638,7 +638,13 @@ header::before {
 .client__card:hover {
   background-color: var(--primary-color);
 }
-
+#jogodamemoria{
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 90px;
+}
 .client__content {
   padding: 1rem;
   background-color: var(--white);

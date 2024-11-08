@@ -205,11 +205,12 @@ A prática de lazer entre idosos é fundamental para promover o bem-estar físic
         <p>
           Os jogos de tabuleiro, como Scrabble ou Bingo, estimulam o raciocínio e a socialização, oferecendo uma experiência interativa e divertida para grupos.
         </p>
-      </div>
+      </div></section>
+      <div id="jogodamemoria"></div>
       <h2 class="section__header">Jogo da Memória</h2>
       <p>Clique no botão abaixo para iniciar o jogo da memória!</p>
       <button id="playButton">Jogar</button> <!-- Botão Play para iniciar o jogo -->
-    </section>
+    </div>
 
     <div class="modal" id="gameModal">
   <div class="modal-content">
