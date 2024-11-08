@@ -43,26 +43,7 @@
     color: #ffffff;
     background: url('./img/doente.jpg') no-repeat center center / cover;
   ">
-    <div class="header__container" style="max-width: 800px;">
-      <h1 id="tittle1" style="font-size: 2.5em; font-weight: bold;">
-        Cuidados para Idosos: <span style="color:  #78c0a8; ">Saúde, Prevenção e Bem-Estar</span> 
-      </h1>
-      <!-- Parágrafo alinhado à esquerda -->
-      <p class="section__description" style="
-        font-size: 1.9em;
-        line-height: 1.6;
-        color: white;
-        font-weight: bold;
-        background-color: #78c0a8;  
-        text-align: justify;
-        margin: 20px 0;
-        padding: px;
-        color: white;
-        widht: 400px;
-      ">
-        À medida que envelhecemos, é natural que certas doenças, como pressão alta, diabetes e problemas de memória, fiquem mais comuns. Por isso, cuidar da saúde com exames regulares, boa alimentação e atividades físicas é essencial para viver com mais disposição e bem-estar.
-      </p>
-    </div>
+
   </header>
 <style>
         body {
@@ -292,12 +273,15 @@ color: #fff;
   text-align: center;
 }
 .section__description {
-  max-width: 600px;
-  margin-inline: auto;
+  max-width: 800px; /* Aumente conforme necessário */
+  margin: 0 auto;
   color: var(--text-light);
-  text-align: center;
   text-align: justify;
+  line-height: 1.6; /* Melhor espaçamento entre linhas */
+  padding: 10px; /* Espaçamento interno */
 }
+
+
 .btn {
   padding: 0.75rem 1.5rem;
   outline: none;
